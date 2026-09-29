@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/* ===============================
+   Root Theme Variables
+================================ */
+:root {
+  --color-background: #f8fafc;
+  --color-text-primary: #007595;
+  --color-primary-soft: #e0ecff;
+  --color-accent: #21c45d;
+  --color-reddish: #ef4343;
+  --color-yellowish: #f59f0a;
+  --color-gold: #e7b008;
+  --color-black: #0F1729;
+  --color-paragraph: #65758b;
+  --color-border: #e1e7ef;
+}
+
+/* ===============================
+   Tailwind Theme Mapping
+================================ */
+@theme inline {
+  --color-background: var(--color-background);
+  --color-text-primary: var(--color-text-primary);
+  --color-primary-soft: var(--color-primary-soft);
+  --color-accent: var(--color-accent);
+  --color-reddish: var(--color-reddish);
+  --color-yellowish: var(--color-yellowish);
+  --color-gold: var(--color-gold);
+  --color-black: var(--color-black);
+  --color-paragraph: var(--color-paragraph);
+}
+
+/* ===============================
+   Base Layer
+================================ */
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-color: var(--color-border);
+    box-sizing: border-box;
+  }
+}
+
+/* ===============================
+   Custom Styles
+================================ */
+.css-t3ipsp-control {
+  border-color: var(--color-border) !important;
+  box-shadow: none !important;
+}
+
+/* Hide Scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* ===============================
+   Global Body Styles
+================================ */
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+
+  background-color: var(--color-background);
+  color: var(--color-paragraph);
+
+  /* Disable pinch zoom */
+  touch-action: pan-x pan-y;
+
+  /* Prevent overscroll bounce */
+  
+
+  /* Smooth rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Prevent double-tap zoom */
+* {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
